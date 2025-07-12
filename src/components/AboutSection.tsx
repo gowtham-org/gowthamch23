@@ -93,15 +93,7 @@ const AboutSection = () => {
           <div className="space-y-8">
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => <Card key={index} className="text-center p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="p-0">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <stat.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                    <div className="text-muted-foreground text-sm">{stat.label}</div>
-                  </CardContent>
-                </Card>)}
+              {stats.map((stat, index) => {})}
             </div>
 
             {/* Education */}

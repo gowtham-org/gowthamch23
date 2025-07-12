@@ -95,18 +95,6 @@ const ServicesSection = () => {
                   ))}
                 </ul>
 
-                {/* CTA Button */}
-                <Button 
-                  variant={service.highlight ? "secondary" : "outline"} 
-                  className={`w-full group-hover:shadow-lg transition-all duration-300 ${
-                    service.highlight 
-                      ? 'bg-white text-primary hover:bg-white/90' 
-                      : 'hover:bg-primary hover:text-white'
-                  }`}
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                </Button>
 
                 {/* Decorative Elements */}
                 {service.highlight && (

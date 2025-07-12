@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, Github, Linkedin, Mail, MapPin } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-hero opacity-95" />
       
@@ -59,52 +57,21 @@ const HeroSection = () => {
                 <MapPin className="w-5 h-5 mr-2" />
                 Houston, TX, USA
               </div>
-              <Badge className="bg-accent-orange text-white border-0 px-4 py-2 text-sm font-semibold">
-                8+ Years Experience
-              </Badge>
+              
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                className="bg-white text-primary hover:bg-white/90 hover:shadow-glow transition-all duration-300 font-semibold px-8"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 transition-all duration-300 font-semibold px-8"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Intro
-              </Button>
-            </div>
+            
 
             {/* Social Links */}
             <div className="flex items-center space-x-6 pt-4">
-              <a 
-                href="https://github.com/gowtham-org" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300"
-              >
+              <a href="https://github.com/gowtham-org" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
                 <Github className="w-6 h-6" />
               </a>
-              <a 
-                href="https://linkedin.com/in/gowtham-chowdam-35ba96185" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300"
-              >
+              <a href="https://linkedin.com/in/gowtham-chowdam-35ba96185" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a 
-                href="mailto:gowthamchowdam2001@gmail.com"
-                className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300"
-              >
+              <a href="mailto:gowthamchowdam2001@gmail.com" className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -113,9 +80,7 @@ const HeroSection = () => {
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 w-fit">
               <div className="flex items-center space-x-2">
                 <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-accent-yellow text-xl">★</span>
-                  ))}
+                  {[...Array(5)].map((_, i) => <span key={i} className="text-accent-yellow text-xl">★</span>)}
                 </div>
                 <span className="text-white font-semibold">Real Customer</span>
               </div>
@@ -138,18 +103,14 @@ const HeroSection = () => {
             {/* Profile Image */}
             <div className="relative z-10">
               <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
-                <img 
-                  src="https://i.postimg.cc/BZd9XDDY/Whats-App-Image-2025-07-10-at-10-17-15-AM.jpg" 
-                  alt="Gowtham Chowdam" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://i.postimg.cc/BZd9XDDY/Whats-App-Image-2025-07-10-at-10-17-15-AM.jpg" alt="Gowtham Chowdam" className="w-full h-full object-cover" />
               </div>
             </div>
 
             {/* Floating Experience Badge */}
             <div className="absolute top-16 -left-4 lg:left-8 bg-white rounded-2xl p-4 shadow-elegant animate-bounce">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">8+</div>
+                <div className="text-2xl font-bold text-primary">2+</div>
                 <div className="text-sm text-muted-foreground">Years</div>
                 <div className="text-sm text-muted-foreground">Experience</div>
               </div>
@@ -157,8 +118,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

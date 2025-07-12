@@ -195,10 +195,7 @@ const SkillsSection = () => {
                 {/* Skills List */}
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => <div key={skillIndex} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium">{skill.name}</span>
-                        
-                      </div>
+                      
                       <Progress value={skill.level} className="h-2" />
                     </div>)}
                 </div>

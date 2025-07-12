@@ -4,149 +4,35 @@ import { Progress } from "@/components/ui/progress";
 import { Database, Code, Cloud, Brain, Settings, BarChart } from "lucide-react";
 const SkillsSection = () => {
   const skillCategories = [{
-    title: "Data Tools & Analytics",
+    title: "Data Tools",
     icon: Database,
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
-    skills: [{
-      name: "Python",
-      level: 95
-    }, {
-      name: "Pandas & NumPy",
-      level: 90
-    }, {
-      name: "Scikit-learn",
-      level: 88
-    }, {
-      name: "TensorFlow",
-      level: 85
-    }, {
-      name: "Power BI",
-      level: 82
-    }, {
-      name: "MS Excel",
-      level: 90
-    }]
+    skills: ["MS Excel", "Power BI", "Pandas", "NumPy", "Matplotlib", "Scikit-learn"]
   }, {
-    title: "Programming Languages",
+    title: "Languages",
     icon: Code,
     color: "text-green-500",
     bgColor: "bg-green-500/10",
-    skills: [{
-      name: "Python",
-      level: 95
-    }, {
-      name: "SQL",
-      level: 90
-    }, {
-      name: "Java",
-      level: 80
-    }, {
-      name: "GoLang",
-      level: 75
-    }, {
-      name: "Bash",
-      level: 85
-    }, {
-      name: "JavaScript",
-      level: 70
-    }]
+    skills: ["Python", "SQL", "Java", "GoLang", "Bash"]
   }, {
-    title: "DevOps & Cloud",
+    title: "DevOps",
     icon: Cloud,
     color: "text-purple-500",
     bgColor: "bg-purple-500/10",
-    skills: [{
-      name: "AWS (EC2, S3, ECR)",
-      level: 90
-    }, {
-      name: "Docker",
-      level: 88
-    }, {
-      name: "Kubernetes",
-      level: 82
-    }, {
-      name: "Terraform",
-      level: 85
-    }, {
-      name: "Jenkins",
-      level: 80
-    }, {
-      name: "GitHub Actions",
-      level: 85
-    }]
+    skills: ["GitHub Actions", "Jenkins", "Docker", "Kubernetes", "AWS (EC2, S3, ECR)", "Terraform"]
   }, {
-    title: "Machine Learning",
+    title: "ML Algorithms",
     icon: Brain,
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
-    skills: [{
-      name: "XGBoost",
-      level: 92
-    }, {
-      name: "Random Forest",
-      level: 90
-    }, {
-      name: "CNN",
-      level: 85
-    }, {
-      name: "SVM",
-      level: 82
-    }, {
-      name: "Ensemble Methods",
-      level: 88
-    }, {
-      name: "Deep Learning",
-      level: 80
-    }]
+    skills: ["Regression", "XGBoost", "CNN", "SVM", "KNN", "Ensemble methods"]
   }, {
-    title: "Monitoring & Tools",
+    title: "Others",
     icon: Settings,
     color: "text-red-500",
     bgColor: "bg-red-500/10",
-    skills: [{
-      name: "Prometheus",
-      level: 85
-    }, {
-      name: "Grafana",
-      level: 82
-    }, {
-      name: "Git",
-      level: 95
-    }, {
-      name: "VS Code",
-      level: 90
-    }, {
-      name: "Jupyter Notebook",
-      level: 88
-    }, {
-      name: "Linux",
-      level: 85
-    }]
-  }, {
-    title: "Data Visualization",
-    icon: BarChart,
-    color: "text-teal-500",
-    bgColor: "bg-teal-500/10",
-    skills: [{
-      name: "Matplotlib",
-      level: 90
-    }, {
-      name: "Seaborn",
-      level: 85
-    }, {
-      name: "Plotly",
-      level: 80
-    }, {
-      name: "D3.js",
-      level: 70
-    }, {
-      name: "Tableau",
-      level: 75
-    }, {
-      name: "Power BI",
-      level: 82
-    }]
+    skills: ["Git", "VS Code", "Jupyter Notebook", "Linux"]
   }];
   const workingProcess = [{
     step: "01",
@@ -193,11 +79,12 @@ const SkillsSection = () => {
                 </div>
 
                 {/* Skills List */}
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => <div key={skillIndex} className="space-y-2">
-                      
-                      <Progress value={skill.level} className="h-2" />
-                    </div>)}
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="secondary" className="text-xs">
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
               </CardContent>
             </Card>)}

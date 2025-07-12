@@ -2,23 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, Target, Users } from "lucide-react";
 const AboutSection = () => {
-  const stats = [{
-    icon: Target,
-    value: "50+",
-    label: "Projects Completed"
-  }, {
-    icon: Users,
-    value: "30+",
-    label: "Happy Clients"
-  }, {
-    icon: Award,
-    value: "8+",
-    label: "Years Experience"
-  }, {
-    icon: GraduationCap,
-    value: "MS",
-    label: "Engineering Data Science"
-  }];
   const education = [{
     degree: "MS in Engineering Data Science",
     school: "University of Houston",
@@ -91,18 +74,6 @@ const AboutSection = () => {
 
           {/* Right Content */}
           <div className="space-y-8">
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
-                <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300">
-                  <CardContent className="p-0">
-                    <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
 
             {/* Education */}
             <div>

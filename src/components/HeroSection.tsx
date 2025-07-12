@@ -77,20 +77,7 @@ const HeroSection = () => {
             </div>
 
             {/* Rating Badge */}
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 w-fit">
-              <div className="flex items-center space-x-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => <span key={i} className="text-accent-yellow text-xl">★</span>)}
-                </div>
-                <span className="text-white font-semibold">Real Customer</span>
-              </div>
-              <div className="flex items-center mt-2 -space-x-2">
-                <div className="w-8 h-8 bg-accent-orange rounded-full border-2 border-white" />
-                <div className="w-8 h-8 bg-accent-yellow rounded-full border-2 border-white" />
-                <div className="w-8 h-8 bg-primary-glow rounded-full border-2 border-white" />
-                <span className="text-white/90 text-sm ml-3">+30</span>
-              </div>
-            </div>
+            
           </div>
 
           {/* Right Content - Profile Image */}
